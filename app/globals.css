@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-brand: #f97316;
+  --color-brand-dark: #ea580c;
+  --color-brand-light: #ffedd5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Refined Pill Button Styles matching reference image */
+.btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #18181b;
+  color: #ffffff;
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 500;
+  padding: 0.65rem 1.6rem;
+  letter-spacing: -0.01em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.btn-pill-dark:hover {
+  background-color: #09090b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-pill-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #f4f4f5;
+  color: #18181b;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.65rem 1.6rem;
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(228, 228, 231, 0.9);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-pill-light:hover {
+  background-color: #ebebef;
+  border-color: #d4d4d8;
+  transform: translateY(-1px);
+}
+
+/* Brand Accent Pill Button */
+.btn-pill-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  letter-spacing: -0.01em;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+  transition: all 0.2s ease;
+}
+.btn-pill-brand:hover {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+}
+
+/* Smooth Image Radius Class */
+.img-rounded {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Status badges */
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.badge-confirmed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.badge-paid {
+  background: #d1fae5;
+  color: #065f46;
+}
+.badge-completed {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+.badge-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
