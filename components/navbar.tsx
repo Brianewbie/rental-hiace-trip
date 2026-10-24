@@ -81,13 +81,16 @@ export default function Navbar() {
 
           {/* Tombol menu mobile */}
           <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700"
-            aria-label="Buka menu"
+            className="md:hidden flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200/90 bg-white text-zinc-800 hover:bg-zinc-50 transition-colors shadow-xs"
+            aria-label={menuOpen ? "Tutup menu" : "Buka menu"}
           >
-            <span className={`block h-0.5 w-4 bg-zinc-800 transition-all ${menuOpen ? "rotate-45 translate-y-1" : ""}`} />
-            <span className={`block h-0.5 w-4 bg-zinc-800 my-0.5 transition-all ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-4 bg-zinc-800 transition-all ${menuOpen ? "-rotate-45 -translate-y-1" : ""}`} />
+            {menuOpen ? (
+              <Icon8 name="close" size={15} color="#18181b" />
+            ) : (
+              <Icon8 name="menu" size={16} color="#18181b" />
+            )}
           </button>
         </div>
       </div>
